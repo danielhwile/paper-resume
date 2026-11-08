@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name — Résumé</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Torn-edge filter, referenced from CSS -->
+  <svg width="0" height="0" aria-hidden="true" focusable="false">
+    <filter id="torn" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="4" seed="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="9"/>
+    </filter>
+  </svg>
+
+  <div class="stage">
+    <nav class="tabs" role="tablist" aria-label="Résumé sections">
+      <button class="tab" role="tab" id="tab-about" aria-controls="panel-about" aria-selected="true"><span>About</span></button>
+      <button class="tab" role="tab" id="tab-experience" aria-controls="panel-experience" aria-selected="false" tabindex="-1"><span>Experience</span></button>
+      <button class="tab" role="tab" id="tab-education" aria-controls="panel-education" aria-selected="false" tabindex="-1"><span>Education</span></button>
+      <button class="tab" role="tab" id="tab-contact" aria-controls="panel-contact" aria-selected="false" tabindex="-1"><span>Contact</span></button>
+    </nav>
+
+    <main class="paper">
+      <header class="masthead">
+        <h1>Your Name</h1>
+        <p class="title">Software Engineer</p>
+      </header>
+
+      <section class="panel" id="panel-about" role="tabpanel" aria-labelledby="tab-about">
+        <h2>About</h2>
+        <p>A short summary of who you are, what you build, and what you're looking for next. Keep it to two or three sentences.</p>
+        <h3>Skills</h3>
+        <ul class="skills">
+          <li>JavaScript</li><li>Python</li><li>HTML &amp; CSS</li><li>Git</li>
+        </ul>
+      </section>
+
+      <section class="panel" id="panel-experience" role="tabpanel" aria-labelledby="tab-experience">
+        <h2>Experience</h2>
+        <article>
+          <h3>Job Title <span>· Company</span></h3>
+          <p class="dates">2022 – Present</p>
+          <ul>
+            <li>Describe an accomplishment with a measurable result.</li>
+            <li>Describe another responsibility or project.</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Previous Title <span>· Company</span></h3>
+          <p class="dates">2019 – 2022</p>
+          <ul>
+            <li>Describe an accomplishment.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="panel" id="panel-education" role="tabpanel" aria-labelledby="tab-education">
+        <h2>Education</h2>
+        <article>
+          <h3>B.S. in Your Major <span>· University</span></h3>
+          <p class="dates">2015 – 2019</p>
+        </article>
+      </section>
+
+      <section class="panel" id="panel-contact" role="tabpanel" aria-labelledby="tab-contact">
+        <h2>Contact</h2>
+        <ul class="contact">
+          <li><a href="mailto:you@example.com">you@example.com</a></li>
+          <li><a href="https://github.com/danielhwile">github.com/danielhwile</a></li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
