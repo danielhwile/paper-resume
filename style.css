@@ -56,6 +56,8 @@ h2 { font-family: "Special Elite", monospace; font-size: 1.5rem; margin: 0 0 12p
 h3 { margin: 20px 0 4px; font-size: 1.05rem; }
 h3 span { font-weight: 400; color: #6b6258; }
 .dates { margin: 0 0 6px; color: #6b6258; font-size: .9rem; }
+.section-gap { margin-top: 36px; }
+.more { margin-top: 24px; }
 ul { padding-left: 1.2rem; }
 a { color: var(--accent); }
 

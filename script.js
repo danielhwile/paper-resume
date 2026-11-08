@@ -26,3 +26,11 @@ tabs.forEach((tab, i) => {
 
 const initial = document.getElementById('tab-' + location.hash.slice(1)) || tabs[0];
 select(initial);
+
+document.querySelectorAll('[data-tab]').forEach(link =>
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    select(document.getElementById('tab-' + link.dataset.tab), true);
+    window.scrollTo({ top: 0 });
+  })
+);

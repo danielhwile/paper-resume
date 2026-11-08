@@ -20,8 +20,8 @@
 
   <div class="stage">
     <nav class="tabs" role="tablist" aria-label="Résumé sections">
-      <button class="tab" role="tab" id="tab-experience" aria-controls="panel-experience" aria-selected="true"><span>Experience</span></button>
-      <button class="tab" role="tab" id="tab-education" aria-controls="panel-education" aria-selected="false" tabindex="-1"><span>Education</span></button>
+      <button class="tab" role="tab" id="tab-home" aria-controls="panel-home" aria-selected="true"><span>Home</span></button>
+      <button class="tab" role="tab" id="tab-experience" aria-controls="panel-experience" aria-selected="false" tabindex="-1"><span>Experience</span></button>
       <button class="tab" role="tab" id="tab-skills" aria-controls="panel-skills" aria-selected="false" tabindex="-1"><span>Skills</span></button>
       <button class="tab" role="tab" id="tab-projects" aria-controls="panel-projects" aria-selected="false" tabindex="-1"><span>Projects</span></button>
       <button class="tab" role="tab" id="tab-contact" aria-controls="panel-contact" aria-selected="false" tabindex="-1"><span>Contact</span></button>
@@ -33,11 +33,48 @@
         <p class="title">Full Stack Developer in Charlotte, North Carolina</p>
       </header>
 
+      <section class="panel" id="panel-home" role="tabpanel" aria-labelledby="tab-home">
+        <h2>Education</h2>
+        <article>
+          <h3>East Carolina University <span>· M.S. Computer Science</span></h3>
+          <p class="dates">August 2021 – December 2025</p>
+          <p>Key Coursework: Cloud Computing, Data Structures and Algorithms, Android Application Development, Big Data Analytics, Machine Learning</p>
+        </article>
+        <article>
+          <h3>Clemson University <span>· B.S. Chemical Engineering</span></h3>
+          <p class="dates">August 2014 – May 2018</p>
+          <p>Key Coursework: Differential Equations, Statistical Analysis, Thermodynamics</p>
+        </article>
+
+        <h2 class="section-gap">Experience</h2>
+        <article>
+          <h3>Care Lumen <span>· Application Development Engineer II</span></h3>
+          <p class="dates">August 2025 – Present</p>
+        </article>
+        <article>
+          <h3>Centene Corporation <span>· Application Development Engineer II</span></h3>
+          <p class="dates">October 2021 – August 2025</p>
+        </article>
+        <article>
+          <h3>Wiley Edge <span>· Full Stack Development Training</span></h3>
+          <p class="dates">August 2021 – October 2021</p>
+        </article>
+        <article>
+          <h3>Forbo Siegling LLC <span>· Product Development Engineer</span></h3>
+          <p class="dates">May 2018 – August 2021</p>
+        </article>
+        <p class="more"><a href="#experience" data-tab="experience">See detailed experience →</a></p>
+      </section>
+
       <section class="panel" id="panel-experience" role="tabpanel" aria-labelledby="tab-experience">
         <h2>Experience</h2>
         <article>
+          <h3>Care Lumen <span>· Application Development Engineer II</span></h3>
+          <p class="dates">August 2025 – Present</p>
+        </article>
+        <article>
           <h3>Centene Corporation <span>· Application Development Engineer II</span></h3>
-          <p class="dates">October 2021 – Present</p>
+          <p class="dates">October 2021 – August 2025</p>
           <ul>
             <li>Developed a Kafka consumer using node-rdkafka to maintain accurate records of offline/online activity, restructuring event handling logic to extract more actionable user insights.</li>
             <li>Expanded a Golang-based Role-Based Access Control (RBAC) system to support role and entitlement models, reducing onboarding complexity across the org.</li>
@@ -62,20 +99,6 @@
             <li>Utilized Python for data analytics from I/O devices to find new process improvement opportunities.</li>
             <li>Managed multidisciplinary projects to meet key deadlines and champion new product development that created cost savings.</li>
           </ul>
-        </article>
-      </section>
-
-      <section class="panel" id="panel-education" role="tabpanel" aria-labelledby="tab-education">
-        <h2>Education</h2>
-        <article>
-          <h3>East Carolina University <span>· M.S. Computer Science</span></h3>
-          <p class="dates">August 2021 – December 2025</p>
-          <p>Key Coursework: Cloud Computing, Data Structures and Algorithms, Android Application Development, Big Data Analytics, Machine Learning</p>
-        </article>
-        <article>
-          <h3>Clemson University <span>· B.S. Chemical Engineering</span></h3>
-          <p class="dates">August 2014 – May 2018</p>
-          <p>Key Coursework: Differential Equations, Statistical Analysis, Thermodynamics</p>
         </article>
       </section>
 
