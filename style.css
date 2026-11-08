@@ -56,7 +56,9 @@ h2 { font-family: Merriweather, Georgia, serif; font-size: 1.5rem; margin: 0 0 1
 h3 { margin: 20px 0 4px; font-size: 1.05rem; font-family: Merriweather, Georgia, serif; }
 h3 span { font-weight: 400; color: #6b6258; }
 .dates { margin: 0 0 6px; color: #6b6258; font-size: .9rem; }
-.section-gap { margin-top: 36px; }
+.section-gap { margin-top: 0; }
+.divider { border: 0; border-top: 2px solid var(--ink); margin: 32px 0 28px; }
+.coursework { font-size: .8rem; color: #4a433b; margin: 4px 0 0; }
 .more { margin-top: 24px; }
 ul { padding-left: 1.2rem; }
 a { color: var(--accent); }
@@ -94,7 +96,7 @@ a { color: var(--accent); }
   /* drop-shadow follows the torn outline, unlike box-shadow */
   filter: drop-shadow(1px 2px 2px rgba(0,0,0,.35));
   transform: translateY(0) rotate(var(--tilt, 0deg));
-  transition: transform .2s ease;
+  transition: transform .2s ease, filter .2s ease;
 }
 
 /* Torn background lives on a pseudo-element so the label stays crisp */
@@ -113,8 +115,14 @@ a { color: var(--accent); }
 .tab:nth-child(4) { --tab-bg: #c6d9ea; --tilt: 1deg; }
 .tab:nth-child(5) { --tab-bg: #e2d0ec; --tilt: -.8deg; }
 
-.tab:hover, .tab:focus-visible { transform: translateY(-4px) rotate(var(--tilt, 0deg)); outline: none; }
+/* Hover: the slip moves toward the viewer (bigger, wider shadow) rather than up */
+.tab:hover, .tab:focus-visible {
+  transform: scale(1.1) rotate(var(--tilt, 0deg));
+  filter: drop-shadow(3px 8px 8px rgba(0,0,0,.45));
+  outline: none;
+}
 .tab[aria-selected="true"] { transform: translateY(-8px) rotate(var(--tilt, 0deg)); font-weight: 700; }
+.tab[aria-selected="true"]:hover { transform: translateY(-8px) scale(1.1) rotate(var(--tilt, 0deg)); }
 .tab:focus-visible span { outline: 2px dashed var(--accent); outline-offset: 4px; }
 
 /* ---------- Small screens ---------- */
