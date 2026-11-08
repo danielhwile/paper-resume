@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Daniel Wile — Résumé</title>
+<style>
+  @page { size: Letter; margin: 0.5in; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Times New Roman", Times, serif; font-size: 10.5pt; line-height: 1.25; color: #111; }
+  header { border-bottom: 1.5pt solid #111; padding-bottom: 6pt; margin-bottom: 10pt; }
+  h1 { margin: 0; font-size: 26pt; }
+  .sub { margin: 0; font-style: italic; }
+  .cols { display: grid; grid-template-columns: 1fr 2.4in; gap: 22pt; }
+  h2 { font-size: 11pt; letter-spacing: .08em; text-transform: uppercase; border-bottom: .75pt solid #111; margin: 0 0 6pt; padding-bottom: 2pt; }
+  section { margin-bottom: 11pt; }
+  h3 { margin: 0; font-size: 11pt; }
+  h3 span { font-weight: 400; font-style: italic; }
+  .d { margin: 0 0 2pt; font-size: 9.5pt; color: #444; }
+  ul { margin: 2pt 0 7pt; padding-left: 13pt; }
+  li { margin-bottom: 2pt; }
+  p { margin: 0 0 4pt; }
+  .small { font-size: 9.5pt; }
+  .skill { margin-bottom: 3pt; font-size: 10pt; }
+  .proj { margin-bottom: 7pt; font-size: 10pt; }
+  .proj h3 { font-size: 10.5pt; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Daniel Wile</h1>
+  <p class="sub">Full Stack Developer in Charlotte, North Carolina</p>
+</header>
+<div class="cols">
+  <main>
+    <section>
+      <h2>Experience</h2>
+      <h3>Care Lumen <span>— Application Development Engineer II</span></h3>
+      <p class="d">August 2025 – Present</p>
+      <h3 style="margin-top:7pt">Centene Corporation <span>— Application Development Engineer II</span></h3>
+      <p class="d">October 2021 – August 2025</p>
+      <ul>
+        <li>Developed a Kafka consumer using node-rdkafka to maintain accurate records of offline/online activity, restructuring event handling logic to extract more actionable user insights.</li>
+        <li>Expanded a Golang-based Role-Based Access Control (RBAC) system to support role and entitlement models, reducing onboarding complexity across the org.</li>
+        <li>Integrated the RBAC service with SailPoint, enabling enterprise-wide identity and access management capabilities.</li>
+        <li>Built and deployed a full-stack appointment scheduling system for healthcare providers using Angular, NestJS, and MongoDB, designed as a Progressive Web App to support offline mode and background queuing.</li>
+        <li>Created CI/CD pipelines using GitLab, Docker, and Nginx for automated testing and deployment.</li>
+        <li>Collaborated closely with cross-functional teams, including product, QA, infrastructure, and design, to deliver scalable solutions in an Agile environment.</li>
+      </ul>
+      <h3>Wiley Edge <span>— Full Stack Development Training</span></h3>
+      <p class="d">August 2021 – October 2021</p>
+      <ul>
+        <li>Developed full stack applications utilizing React, Mongo, REST API, Node, Express.</li>
+        <li>Learned key software development concepts including data structures and algorithms for designing efficient applications.</li>
+      </ul>
+      <h3>Forbo Siegling LLC <span>— Product Development Engineer</span></h3>
+      <p class="d">May 2018 – August 2021</p>
+      <ul>
+        <li>Utilized Python for data analytics from I/O devices to find new process improvement opportunities.</li>
+        <li>Managed multidisciplinary projects to meet key deadlines and champion new product development that created cost savings.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Education</h2>
+      <h3>East Carolina University <span>— M.S. Computer Science</span></h3>
+      <p class="d">August 2021 – December 2025</p>
+      <p class="small">Key Coursework: Cloud Computing, Data Structures and Algorithms, Android Application Development, Big Data Analytics, Machine Learning</p>
+      <h3>Clemson University <span>— B.S. Chemical Engineering</span></h3>
+      <p class="d">August 2014 – May 2018</p>
+      <p class="small">Key Coursework: Differential Equations, Statistical Analysis, Thermodynamics</p>
+    </section>
+  </main>
+  <aside>
+    <section>
+      <h2>Skills</h2>
+      <p class="skill"><b>TypeScript</b> – Angular, NestJS</p>
+      <p class="skill"><b>JavaScript</b> – React, Express, node-rdkafka</p>
+      <p class="skill"><b>Python</b> – NumPy, Pandas</p>
+      <p class="skill"><b>GoLang</b> – Back End Development</p>
+      <p class="skill"><b>Database</b> – MongoDB, SQLite, NoSQL</p>
+      <p class="skill"><b>Responsive Design</b> – HTML, CSS, SCSS</p>
+      <p class="skill"><b>CI/CD</b> – Pipeline construction, Docker, End to End Test Development</p>
+      <p class="skill"><b>Other</b> – Git, Agile, Scrum, Kanban, REST API, GraphQL, Kafka</p>
+    </section>
+    <section>
+      <h2>Projects</h2>
+      <div class="proj"><h3>Healthcare Scheduler App</h3>Developed a scheduler application from scratch for healthcare providers to plan and schedule their upcoming appointments.<br><i>Angular, NestJS, MongoDB, Docker</i></div>
+      <div class="proj"><h3>RBAC Management App</h3>Developed full stack for an internal corporation-wide Role Based Access Management application including a full redesign of security, bulk request management, and ease of access for key stakeholders.<br><i>Angular, GoLang, MongoDB, Docker</i></div>
+      <div class="proj"><h3>Messageboard Application</h3>Developed a full stack message board application with secure sign on and password management, multi-user interaction including post, comment, and voting capabilities.<br><i>React, Express, MongoDB, GraphQL</i></div>
+    </section>
+  </aside>
+</div>
+</body>
+</html>
