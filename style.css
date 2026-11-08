@@ -33,14 +33,25 @@ body {
 .sheet {
   position: relative;
   padding: 48px 72px 40px;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,.3)) drop-shadow(0 8px 12px rgba(0,0,0,.35));
+  transform: translateX(var(--dx, 0)) rotate(var(--rot, 0deg));
+  --clip: 0 0 0 0;
+}
+
+/* Paper body: oversized and torn, then clipped so only the overlapped edge stays ragged */
+.sheet::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: var(--it, -20px) -20px var(--ib, -20px) -20px;
   background:
     linear-gradient(90deg, rgba(0,0,0,.05), transparent 6%, transparent 94%, rgba(0,0,0,.04)),
     var(--paper);
-  box-shadow:
-    0 1px 2px rgba(0,0,0,.25),
-    0 8px 20px rgba(0,0,0,.35);
-  transform: translateX(var(--dx, 0)) rotate(var(--rot, 0deg));
+  filter: url(#torn);
+  clip-path: inset(calc(20px + var(--ct, 0px)) 20px calc(20px + var(--cb, 0px)) 20px);
 }
+.tear-b { --ib: 0px; --cb: -30px; }
+.tear-t { --it: 0px; --ct: -30px; }
 
 /* Paper grain via SVG noise (no image file needed) */
 .sheet::before {
@@ -56,8 +67,9 @@ body {
 /* Header is always the top sheet; each sheet below tucks under the one above */
 .masthead { z-index: 4; --rot: -.4deg; --dx: 0px; padding-top: 64px; }
 .panel .sheet { margin-top: -18px; padding-top: 66px; min-height: 260px; z-index: 3; --rot: .5deg; --dx: 8px; }
-.panel .sheet:nth-child(2) { z-index: 2; --rot: -.6deg; --dx: -7px; }
-.panel .sheet:nth-child(3) { z-index: 1; }
+.panel .sheet:first-child:not(:last-child) { z-index: 2; padding-bottom: 68px; }
+/* Second sheet lies on top of the first, at the same height as the header */
+.panel .sheet:nth-child(2) { z-index: 4; margin-top: -36px; --rot: -.6deg; --dx: -7px; }
 
 .actions {
   position: absolute;
@@ -190,8 +202,8 @@ a { color: var(--accent); }
 /* ---------- Print ---------- */
 @media print {
   body { background: none; }
-  .tabs, .actions, svg, .sheet::before { display: none; }
+  .tabs, .actions, svg, .sheet::before, .sheet::after { display: none; }
   .stage { margin: 0; padding: 0; }
-  .sheet, .panel .sheet { box-shadow: none; transform: none; background: none; padding: 0 0 16px; margin: 0; min-height: 0; }
+  .sheet, .panel .sheet { filter: none; transform: none; background: none; padding: 0 0 16px; margin: 0; min-height: 0; }
   .js .panel { display: block; }
 }
