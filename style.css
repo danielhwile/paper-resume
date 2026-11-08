@@ -50,11 +50,18 @@ body {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/><feColorMatrix values='0 0 0 0 .5  0 0 0 0 .45  0 0 0 0 .38  0 0 0 .5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
 }
 
-.download {
+.actions {
   position: absolute;
   z-index: 1;
   top: 44px;
   right: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+}
+.paper-btn {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -63,23 +70,24 @@ body {
   font-size: .95rem;
   text-decoration: none;
   filter: drop-shadow(1px 2px 2px rgba(0,0,0,.3));
-  transform: rotate(1deg);
+  transform: rotate(var(--tilt, 1deg));
   transition: transform .2s ease, filter .2s ease;
 }
-.download::before {
+.paper-btn::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: #e8dcc0;
+  background: var(--btn-bg, #e8dcc0);
   filter: url(#torn);
 }
-.download:hover, .download:focus-visible {
-  transform: scale(1.1) rotate(1deg);
+.paper-btn:hover, .paper-btn:focus-visible {
+  transform: scale(1.1) rotate(var(--tilt, 1deg));
   filter: drop-shadow(3px 8px 8px rgba(0,0,0,.4));
   outline: none;
 }
-.download:focus-visible span { outline: 2px dashed var(--accent); outline-offset: 4px; }
+.paper-btn:focus-visible span { outline: 2px dashed var(--accent); outline-offset: 4px; }
+.paper-btn.contact { --btn-bg: #d9e4d0; --tilt: -1deg; }
 
 .masthead { border-bottom: 2px solid var(--ink); padding-bottom: 16px; margin-bottom: 28px; }
 h1 { font-family: inherit; font-size: 2.6rem; font-weight: 900; margin: 0; }
@@ -163,7 +171,7 @@ a { color: var(--accent); }
 }
 
 @media (max-width: 700px) {
-  .download { top: 52px; right: 16px; }
+  .actions { top: 52px; right: 16px; }
   .stage { margin: 30px 0 0; }
   .paper { padding: 56px 22px 32px; transform: none; min-height: 100vh; }
   .tabs { left: 8px; right: 8px; overflow-x: auto; padding-top: 10px; gap: 6px; }
@@ -172,7 +180,7 @@ a { color: var(--accent); }
 /* ---------- Print ---------- */
 @media print {
   body { background: none; }
-  .tabs, .download, svg, .paper::before { display: none; }
+  .tabs, .actions, svg, .paper::before { display: none; }
   .stage { margin: 0; padding: 0; }
   .paper { box-shadow: none; transform: none; padding: 0; min-height: 0; }
   .js .panel { display: block; }
