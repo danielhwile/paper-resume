@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Name — Résumé</title>
+  <title>Daniel Wile — Résumé</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Lora:wght@400;600&display=swap" rel="stylesheet">
@@ -20,42 +20,47 @@
 
   <div class="stage">
     <nav class="tabs" role="tablist" aria-label="Résumé sections">
-      <button class="tab" role="tab" id="tab-about" aria-controls="panel-about" aria-selected="true"><span>About</span></button>
-      <button class="tab" role="tab" id="tab-experience" aria-controls="panel-experience" aria-selected="false" tabindex="-1"><span>Experience</span></button>
+      <button class="tab" role="tab" id="tab-experience" aria-controls="panel-experience" aria-selected="true"><span>Experience</span></button>
       <button class="tab" role="tab" id="tab-education" aria-controls="panel-education" aria-selected="false" tabindex="-1"><span>Education</span></button>
+      <button class="tab" role="tab" id="tab-skills" aria-controls="panel-skills" aria-selected="false" tabindex="-1"><span>Skills</span></button>
+      <button class="tab" role="tab" id="tab-projects" aria-controls="panel-projects" aria-selected="false" tabindex="-1"><span>Projects</span></button>
       <button class="tab" role="tab" id="tab-contact" aria-controls="panel-contact" aria-selected="false" tabindex="-1"><span>Contact</span></button>
     </nav>
 
     <main class="paper">
       <header class="masthead">
-        <h1>Your Name</h1>
-        <p class="title">Software Engineer</p>
+        <h1>Daniel Wile</h1>
+        <p class="title">Full Stack Developer in Charlotte, North Carolina</p>
       </header>
-
-      <section class="panel" id="panel-about" role="tabpanel" aria-labelledby="tab-about">
-        <h2>About</h2>
-        <p>A short summary of who you are, what you build, and what you're looking for next. Keep it to two or three sentences.</p>
-        <h3>Skills</h3>
-        <ul class="skills">
-          <li>JavaScript</li><li>Python</li><li>HTML &amp; CSS</li><li>Git</li>
-        </ul>
-      </section>
 
       <section class="panel" id="panel-experience" role="tabpanel" aria-labelledby="tab-experience">
         <h2>Experience</h2>
         <article>
-          <h3>Job Title <span>· Company</span></h3>
-          <p class="dates">2022 – Present</p>
+          <h3>Centene Corporation <span>· Application Development Engineer II</span></h3>
+          <p class="dates">October 2021 – Present</p>
           <ul>
-            <li>Describe an accomplishment with a measurable result.</li>
-            <li>Describe another responsibility or project.</li>
+            <li>Developed a Kafka consumer using node-rdkafka to maintain accurate records of offline/online activity, restructuring event handling logic to extract more actionable user insights.</li>
+            <li>Expanded a Golang-based Role-Based Access Control (RBAC) system to support role and entitlement models, reducing onboarding complexity across the org.</li>
+            <li>Integrated the RBAC service with SailPoint, enabling enterprise-wide identity and access management capabilities.</li>
+            <li>Built and deployed a full-stack appointment scheduling system for healthcare providers using Angular, NestJS, and MongoDB, designed as a Progressive Web App to support offline mode and background queuing.</li>
+            <li>Created CI/CD pipelines using GitLab, Docker, and Nginx for automated testing and deployment.</li>
+            <li>Collaborated closely with cross-functional teams, including product, QA, infrastructure, and design, to deliver scalable solutions in an Agile environment.</li>
           </ul>
         </article>
         <article>
-          <h3>Previous Title <span>· Company</span></h3>
-          <p class="dates">2019 – 2022</p>
+          <h3>Wiley Edge <span>· Full Stack Development Training</span></h3>
+          <p class="dates">August 2021 – October 2021</p>
           <ul>
-            <li>Describe an accomplishment.</li>
+            <li>Developed full stack applications utilizing React, Mongo, REST API, Node, Express.</li>
+            <li>Learned key software development concepts including data structures and algorithms for designing efficient applications.</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Forbo Siegling LLC <span>· Product Development Engineer</span></h3>
+          <p class="dates">May 2018 – August 2021</p>
+          <ul>
+            <li>Utilized Python for data analytics from I/O devices to find new process improvement opportunities.</li>
+            <li>Managed multidisciplinary projects to meet key deadlines and champion new product development that created cost savings.</li>
           </ul>
         </article>
       </section>
@@ -63,15 +68,53 @@
       <section class="panel" id="panel-education" role="tabpanel" aria-labelledby="tab-education">
         <h2>Education</h2>
         <article>
-          <h3>B.S. in Your Major <span>· University</span></h3>
-          <p class="dates">2015 – 2019</p>
+          <h3>East Carolina University <span>· M.S. Computer Science</span></h3>
+          <p class="dates">August 2021 – December 2025</p>
+          <p>Key Coursework: Cloud Computing, Data Structures and Algorithms, Android Application Development, Big Data Analytics, Machine Learning</p>
+        </article>
+        <article>
+          <h3>Clemson University <span>· B.S. Chemical Engineering</span></h3>
+          <p class="dates">August 2014 – May 2018</p>
+          <p>Key Coursework: Differential Equations, Statistical Analysis, Thermodynamics</p>
+        </article>
+      </section>
+
+      <section class="panel" id="panel-skills" role="tabpanel" aria-labelledby="tab-skills">
+        <h2>Skills</h2>
+        <dl class="skill-list">
+          <dt>TypeScript</dt><dd>Angular, NestJS</dd>
+          <dt>JavaScript</dt><dd>React, Express, node-rdkafka</dd>
+          <dt>Python</dt><dd>NumPy, Pandas</dd>
+          <dt>GoLang</dt><dd>Back End Development</dd>
+          <dt>Database</dt><dd>MongoDB, SQLite, NoSQL</dd>
+          <dt>Responsive Design</dt><dd>HTML, CSS, SCSS</dd>
+          <dt>CI/CD</dt><dd>Pipeline construction, Docker, End to End Test Development</dd>
+          <dt>Other</dt><dd>Git, Agile, Scrum, Kanban, REST API, GraphQL, Kafka</dd>
+        </dl>
+      </section>
+
+      <section class="panel" id="panel-projects" role="tabpanel" aria-labelledby="tab-projects">
+        <h2>Projects</h2>
+        <article>
+          <h3>Healthcare Scheduler App</h3>
+          <p>Developed a scheduler application from scratch for healthcare providers to plan and schedule their upcoming appointments.</p>
+          <p class="dates">Angular, NestJS, MongoDB, Docker</p>
+        </article>
+        <article>
+          <h3>RBAC Management App</h3>
+          <p>Developed full stack for an internal corporation-wide Role Based Access Management application including a full redesign of security, bulk request management, and ease of access for key stakeholders.</p>
+          <p class="dates">Angular, GoLang, MongoDB, Docker</p>
+        </article>
+        <article>
+          <h3>Messageboard Application</h3>
+          <p>Developed a full stack message board application with secure sign on and password management, multi-user interaction including post, comment, and voting capabilities.</p>
+          <p class="dates">React, Express, MongoDB, GraphQL</p>
         </article>
       </section>
 
       <section class="panel" id="panel-contact" role="tabpanel" aria-labelledby="tab-contact">
         <h2>Contact</h2>
         <ul class="contact">
-          <li><a href="mailto:you@example.com">you@example.com</a></li>
           <li><a href="https://github.com/danielhwile">github.com/danielhwile</a></li>
         </ul>
       </section>
